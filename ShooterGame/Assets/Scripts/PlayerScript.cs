@@ -58,6 +58,7 @@ public class PlayerScript : MonoBehaviour {
             if (enemyHealth != null) enemyHealth.Damage(enemyHealth.hp);
 
             damagePlayer = true;
+            Destroy(enemy.gameObject);
         }
 
         if (damagePlayer)
