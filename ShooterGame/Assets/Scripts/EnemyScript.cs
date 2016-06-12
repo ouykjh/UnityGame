@@ -17,7 +17,7 @@ public class EnemyScript : MonoBehaviour {
 	void Start () {
         hasSpawn = false;
         GetComponent<Collider2D>().enabled = false;
-        moveScript.enabled = false;
+        moveScript.enabled = true;
         foreach (WeaponScript weapon in weapons)
         {
             weapon.enabled = false;
@@ -56,7 +56,6 @@ public class EnemyScript : MonoBehaviour {
         hasSpawn = true;
 
         GetComponent<Collider2D>().enabled = true;
-        moveScript.enabled = true;
         foreach (WeaponScript weapon in weapons)
         {
           weapon.enabled = true;

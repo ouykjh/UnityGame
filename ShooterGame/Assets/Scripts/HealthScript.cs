@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class HealthScript : MonoBehaviour {
 
     public int hp = 1;
     public bool isEnemy = true;
+    public Slider healthBar;
 
     public void Damage(int damageCount)
     {
@@ -26,14 +28,10 @@ public class HealthScript : MonoBehaviour {
                 Destroy(shot.gameObject);
             }
         }
+        if (healthBar != null)
+        {
+            healthBar.value = hp * 0.22f;
+        }
     }
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }
