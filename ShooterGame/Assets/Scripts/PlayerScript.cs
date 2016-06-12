@@ -66,4 +66,9 @@ public class PlayerScript : MonoBehaviour {
             if (playerHealth != null) playerHealth.Damage(1);
         }
     }
+
+    void OnDestroy()
+    {
+        transform.parent.gameObject.AddComponent<GameOverScript>();
+    }
 }
