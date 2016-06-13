@@ -6,8 +6,17 @@ public class WinScript : MonoBehaviour {
     const int buttonWidth = 240;
     const int buttonHeight = 120;
 
+    private GUISkin skin;
+
+    void Start()
+    {
+        skin = Resources.Load("GUISkin") as GUISkin;
+    }
+
     void OnGUI()
     {
+        GUI.skin = skin;
+
         if (
               GUI.Button(
             // Center in X, 2/3 of the height in Y
