@@ -3,11 +3,18 @@ using System.Collections;
 
 public class GameOverScript : MonoBehaviour
 {
+    private GUISkin skin;
+
+    void Start()
+    {
+        skin = Resources.Load("GUISkin") as GUISkin;
+    }
 
     void OnGUI()
     {
         const int buttonWidth = 240;
         const int buttonHeight = 120;
+        GUI.skin = skin;
 
         if (
           GUI.Button(

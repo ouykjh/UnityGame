@@ -3,10 +3,18 @@ using System.Collections;
 
 public class MenuScript : MonoBehaviour
 {
+    private GUISkin skin;
+
+    void Start()
+    {
+        skin = Resources.Load("GUISkin") as GUISkin;
+    }
+
     void OnGUI()
     {
         const int buttonWidth = 240;
         const int buttonHeight = 120;
+        GUI.skin = skin;
 
         Rect buttonRect = new Rect(
               Screen.width / 2 - (buttonWidth / 2),
